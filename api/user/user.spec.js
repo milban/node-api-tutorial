@@ -1,7 +1,7 @@
 const assert = require('assert')
 const should = require('should')
 const request = require('supertest')
-const app = require('./index.js')
+const app = require('../../index.js')
 
 describe('GET /users', () => {
     describe('성공', () => {
@@ -39,7 +39,6 @@ describe('GET /users', () => {
         })
     })
 })
-
 describe('GET /users/:id', () => {
     describe('성공', () => {
         it('유저 객체를 반환한다.', done => {
@@ -67,7 +66,6 @@ describe('GET /users/:id', () => {
         })
     })
 })
-
 describe('DELETE /users/:id', () => {
     describe('성공', () => {
         it('204 응답', done => {
@@ -86,7 +84,6 @@ describe('DELETE /users/:id', () => {
         })
     })
 })
-
 describe('POST /users', () => {
     describe('성공', () => {
         it('201을 응답, 생성된 유저 객체를 반환한다.', done => {
